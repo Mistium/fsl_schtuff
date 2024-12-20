@@ -1541,5 +1541,6 @@ function formatString(value) {
     return castType(value,"string")[0];
 }
 
-
-console.log(runAst(generateAst(`print("hello world")`),"main",[],true))
+window.runFSL = function(code,func,args) {
+    return runAst(generateAst(code),func,args,true);
+}
